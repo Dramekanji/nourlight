@@ -22,6 +22,13 @@ function Home() {
           <button>Commandez Ici</button>
         </Link>
       </div>
+      <div className="specialText"></div>
+      <div className="foodCardContainer">
+        <h1>Nos Specialités</h1>
+        <div className="foodCard1"></div>
+        <div className="foodCard2"></div>
+        <div className="foodCard3"></div>
+      </div>
     </div>
   );
 }
