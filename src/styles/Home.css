@@ -57,6 +57,7 @@
 .foodCardContainer {
   width: 20%; /* Adjust the width as needed */
   height: 80vh;
+  margin-right: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align items to the top */
@@ -66,7 +67,7 @@
 
 .foodCardContainer h1 {
   color: #dc143c;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .foodCard1,
@@ -79,6 +80,7 @@
   margin-bottom: 20px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   border: 1px solid #dc143c;
+  transition: transform 0.3s ease;
 }
 .foodCard1:hover,
 .foodCard2:hover,
@@ -91,6 +93,7 @@
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   border: 1px solid #fff;
   cursor: pointer;
+  transform: translateX(-20px);
 }
 
 @media only screen and (max-width: 650px) {
