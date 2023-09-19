@@ -1,7 +1,7 @@
 .home {
   width: 100%;
   max-width: 1200px; /* Set a maximum width for the page */
-  height: 90vh;
+  height: 75vh;
   margin: 0 auto; /* Center the content horizontally within the constrained width */
   display: flex;
   justify-content: space-between;
@@ -58,11 +58,13 @@
   transition: 0.3s ease-in;
 }
 
+/* Add this style to Home.css */
 .foodCardContainer {
   width: 20%;
   height: 80vh;
-  margin-left: auto; /* Push the container to the right */
-  margin-right: -100px; /* Adjust margin-right to offset it from the right edge */
+  margin-left: auto;
+  margin-right: -100px;
+  margin-top: -50px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -73,20 +75,22 @@
 .foodCardContainer h1 {
   color: #dc143c;
   margin-left: 70px;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 .foodCard1,
 .foodCard2,
 .foodCard3 {
   background-color: #fff;
+  display: flex;
+  align-items: center;
   height: 120px;
   width: 450px;
   border-radius: 100px;
   margin-bottom: 20px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   border: 1px solid #dc143c;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Add color transition */
 }
 
 .foodCard1:hover,
@@ -101,6 +105,7 @@
   border: 1px solid #fff;
   cursor: pointer;
   transform: translateX(-20px);
+  color: #fff; /* Change text color on hover */
 }
 
 .foodCard1 img,
@@ -110,8 +115,24 @@
   max-height: 100%;
   object-fit: cover;
   border-radius: 100px;
+  margin-right: 20px;
 }
 
+.foodCard1 p,
+.foodCard2 p,
+.foodCard3 p {
+  flex: 1;
+  font-size: 16px;
+  color: #dc143c;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add color transition for text */
+}
+.foodCard1:hover p,
+.foodCard2:hover p,
+.foodCard3:hover p {
+  color: #fff;
+}
 @media only screen and (max-width: 650px) {
   .home {
     flex-direction: column;
