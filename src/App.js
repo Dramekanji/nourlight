@@ -14,7 +14,7 @@ function App() {
           <Route path="/" exact Component={Home} />
           <Route path="/menu" exact Component={Menu} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

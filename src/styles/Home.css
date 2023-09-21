@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: left;
-  flex-direction: row;
+  /* flex-direction: row; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,12 +133,16 @@
 .foodCard3:hover p {
   color: #fff;
 }
+/* Media query for screens with a maximum width of 650px */
 @media only screen and (max-width: 650px) {
   .home {
     flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
   }
 
   .headerContainer {
+    /* Adjust the styles for smaller screens here */
     margin-left: 0px;
     border-radius: 10px;
     padding: 10px;
@@ -147,33 +151,37 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #121619;
+    /* background-color: #121619; */
     color: white;
+    margin-top: 20px; /* Adjust the margin-top to bring down the headerContainer */
   }
 
   .headerContainer h1 {
     font-size: 40px;
     height: 30px;
-    color: white;
+    color: #dc143c;
+    margin-top: 550px; /* Adjust the margin-top to bring down the h1 */
   }
 
   .headerContainer p {
-    font-size: 30px;
-    color: white;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px; /* Adjust the margin-top to bring down the p */
+    text-align: center;
   }
 
   .headerContainer button {
-    background-color: white;
-    color: #121619;
+    background-color: #dc143c;
+    color: #fff;
     margin-bottom: 30px;
-  }
-
-  .headerContainer button:hover {
-    background-color: rgb(225, 225, 225);
-    color: #121619;
+    margin-top: 20px; /* Adjust the margin-top to bring down the button */
   }
 
   .foodCardContainer {
     width: 100%;
+    text-align: center; /* Center text within the container */
+    margin-top: 20px; /* Adjust the margin-top value as needed to bring down the foodCardContainer */
   }
 }
+
+/* Rest of your CSS styles for larger screens */
