@@ -1,0 +1,4 @@
+.menuContainer {
+  overflow-y: auto; /* Add vertical scrollbar if content overflows */
+  max-height: 80vh; /* Adjust the maximum height as needed */
+}
