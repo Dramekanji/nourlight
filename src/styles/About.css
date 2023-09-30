@@ -1,0 +1,36 @@
+/* About.css */
+
+/* Styles for screens with a maximum width of 650px */
+@media only screen and (max-width: 650px) {
+  .about {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .about h1 {
+    font-size: 24px; /* Adjust header font size for smaller screens */
+  }
+
+  .about p {
+    font-size: 16px; /* Adjust paragraph font size for smaller screens */
+  }
+}
+
+/* Default styles */
+.about {
+  background-color: #f5f5f5; /* Background color for the About section */
+  padding: 40px;
+  text-align: center;
+}
+
+.about h1 {
+  color: #dc143c; /* Header color */
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #333; /* Text color */
+  margin-bottom: 20px;
+  line-height: 1.5;
+}

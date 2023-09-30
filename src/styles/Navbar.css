@@ -85,7 +85,10 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+  .navBar {
+    background-color: #fff;
+  }
   .navBar .rightSide a {
     display: none;
   }
@@ -98,7 +101,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
   .navBar .rightSide button {
     display: none;
   }

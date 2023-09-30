@@ -1,37 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import HomeImage from "../assets/jollof-bg.png";
-import "../styles/Home.css";
 import Special1 from "../assets/special1.png";
 import Special2 from "../assets/special2.png";
 import Special3 from "../assets/special3.png";
+import InitialCentralImage from "../assets/fonio.jpeg";
+import "../styles/Home.css";
 
 function Home() {
-  const [backgroundImage, setBackgroundImage] = useState(HomeImage);
+  const [centralImage, setCentralImage] = useState(InitialCentralImage);
 
   const handleCardClick = (newImage) => {
-    // Update the background image when a card is clicked
-    setBackgroundImage(newImage);
-  };
-
-  const backgroundImageStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: "60%",
-    backgroundPosition: "center top",
-    transition: "background-image 0.3s ease",
+    setCentralImage(newImage);
   };
 
   return (
-    <div className="home" style={backgroundImageStyle}>
+    <div className="home">
       <div className="headerContainer">
-        <h1>NourLight</h1>
-        <p>
-          Retrouvez de la lumière dans vos assiettes à travers nos mets
-          Africains.
-        </p>
-        <Link to="/menu">
-          <button>Commandez Ici</button>
-        </Link>
+        <div className="headerContent">
+          <h1>NourLight</h1>
+          <p>
+            Retrouvez de la lumière dans vos assiettes à travers nos mets
+            Africains.
+          </p>
+          <Link to="/menu">
+            <button>Commandez Ici</button>
+          </Link>
+        </div>
+      </div>
+      <div className="centralImageContainer">
+        <img src={centralImage} alt="Central" className="centralImage" />
       </div>
       <div className="foodCardContainer">
         <h1>Nos Specialités</h1>
