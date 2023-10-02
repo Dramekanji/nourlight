@@ -1,111 +1,148 @@
 .navBar {
-  width: 100%;
-  height: 100px;
-  /* background-color: #dc143c; */
+  background-color: red;
+  height: 80px;
   display: flex;
-  flex-direction: row;
-}
-
-.navBar .leftSide {
-  flex: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 5px;
-  margin-bottom: 20;
-}
-
-.navBar .leftSide img {
-  width: 120px;
-}
-
-.navBar .rightSide {
-  flex: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.navBar a {
-  color: black;
+.navBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navBarLogo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
   text-decoration: none;
-  margin: 20px;
-  font-weight: bold;
-}
-.navBar a:hover {
-  color: #dc143c;
-  cursor: pointer;
-  transition: 0.3s ease-in;
-  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
 }
 
-.navBar .rightSide button {
-  background-color: transparent;
-  border: none;
-  color: #dc143c;
-  cursor: pointer;
+.navMenu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
 }
 
-.navBar .rightSide svg {
-  font-size: 40px;
+.navItem {
+  height: 80px;
 }
 
-.navBar #open {
-  padding-left: 0px;
+.navLinks {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
 }
-.navBar #open img {
+
+.navLinks:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.icon {
+  color: red; /* Change this to the desired color */
+}
+
+.menuIcon {
   display: none;
 }
 
-.navBar #close img {
-  display: inherit;
-}
-
-.navBar #open .hiddenLinks {
-  display: inherit;
-  margin-left: 30px;
-}
-
-.navBar #close .hiddenLinks {
-  display: none;
-}
-
-.navBar #open a {
-  width: 70px;
-  margin: 5px;
-}
-
-@media only screen and (max-width: 900px) {
-  .navBar .rightSide a {
-    width: 70px;
-  }
-  .navBar .leftSide {
-    padding-left: 50px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
+@media screen and (max-width: 960px) {
   .navBar {
-    background-color: #fff;
+    position: relative;
+    background-color: white;
   }
-  .navBar .rightSide a {
-    display: none;
-  }
-  .navBar .rightSide {
-    justify-content: flex-end;
-    padding-right: 50px;
-  }
-  .navBar .rightSide button {
-    display: inherit;
-  }
-}
 
-@media only screen and (min-width: 650px) {
-  .navBar .rightSide button {
-    display: none;
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
   }
-  .hiddenLinks {
-    display: none;
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: left 0.5s ease-in-out;
+  }
+
+  .navMenu.active {
+    background: white;
+    left: 0;
+    opacity: 1;
+    transition: left 0.5s ease-in-out; /* Transition for opening the menu */
+    z-index: 1;
+    height: auto;
+  }
+
+  .navMenu.inactive {
+    /* New class for closing the menu */
+    left: -100%;
+    transition: left 0.5s ease-in-out; /* Transition for closing the menu */
+  }
+
+  .navLinks {
+    text-align: center;
+    padding: 1rem 2rem 0.5rem 2rem;
+    width: 100%;
+    display: table;
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .navLinks:hover {
+    color: red;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out; /* Adjust the transition duration and timing function */
+    /* border-bottom: 1px solid red; */
+    border: none;
+  }
+
+  .navItem:hover {
+    border: none;
+  }
+
+  .navItem {
+    width: 100%;
+  }
+
+  .navBarLogo {
+    position: absolute;
+    top: -7rem;
+    left: -7rem;
+    transform: translate(25%, 50%);
   }
 }
